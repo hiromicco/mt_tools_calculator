@@ -1,7 +1,7 @@
 <?php 
-$dsn = 'mysql:dbname=vanblog_mttools;host=mysql5018.xserver.jp;charset=utf8';
-$user = 'vanblog_hymhouse';
-$password = 'hymhouse0694';
+$dsn = 'mysql:dbname=mt_tools_calculator;host=localhost;charset=utf8';
+$user = 'root';
+$password = 'root';
 try {
   $db = new PDO($dsn, $user, $password);
 } catch(PDOException $e) {
