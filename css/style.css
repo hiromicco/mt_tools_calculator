@@ -1,0 +1,189 @@
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-size: 16px;
+  color: #707070;
+}
+
+.container {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* header */
+header .header_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+a.site_title {
+  display: block;
+  align-items: center;
+  width: 168px;
+  height: 41px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #707070;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #707070;
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 12px 2px 11px 2px;
+}
+
+header img {
+  margin-right: 4px;
+}
+
+a.logout_btn {
+  display: block;
+  width: 100px;
+  height: 24px;
+  background: #e6e4e4;
+  border-radius: 17px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
+  line-height: 24px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px #d3d3d3;
+  margin-top: 24px;
+}
+
+a.scale_page_btn {
+  display: block;
+  width: 144px;
+  height: 33px;
+  background: #A0E697;
+  border-radius: 17px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
+  line-height: 33px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px #5B8456;
+  margin-top: 15px;
+}
+
+/* main */
+/* section.mytool_register */
+section.mytool_register {
+  padding: 6px 22px 18px 22px;
+}
+
+.mytool_register h2 {
+  font-weight: normal;
+  margin-bottom: 18px;
+  margin-left: 10px;
+}
+
+.user_name {
+  font-family: serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.tool_property {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tool_property dt {
+  width: 84px;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 29px;
+}
+
+.tool_property dd select, input {
+  width: 204px;
+  height: 28px;
+  border: 1px solid #B4B2B2;
+  border-radius: 7px;
+  padding-left: 10px;
+}
+
+input.item_register_btn {
+  display: block;
+  width: 144px;
+  height: 33px;
+  background: #97E3E6;
+  border-radius: 17px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
+  line-height: 33px;
+  text-decoration: none;
+  box-shadow: 0 1px 3px #568384;
+  margin-top: 20px;
+  margin-left: 150px;
+}
+
+/* section.mytool_register ここまで*/
+
+
+/* section.mytool_list */
+section.mytool_list {
+  background: #F8F8F8;
+  padding-top: 25px;
+  padding-bottom: 65px;
+  text-align: center;
+}
+
+.mytool_list h2 {
+  font-weight: normal;
+  margin-bottom: 14px;
+}
+
+table, td, th{
+  border: 1px solid #B4B2B2;
+  font-size: 13px;
+  font-weight: normal;
+  background: #fff;
+}
+
+th {
+  border-bottom: 1.3px solid #555;
+}
+
+.delete_th {
+  width: 10px;
+}
+
+table {
+  width: 350px;
+  margin: 0 auto;
+}
+
+.mytool_list th {
+  padding: 11px 14px;
+}
+
+.mytool_list td {
+  padding: 10px 0;
+}
+
+.mytool_list a {
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* section.mytool_list ここまで*/
+
+/* footer  */
+footer {
+  width: 100%;
+  background: #909198;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  /* position: fixed; */
+  bottom: 0;
+}

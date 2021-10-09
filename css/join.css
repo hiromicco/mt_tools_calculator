@@ -1,0 +1,62 @@
+@import url(../css/style.css);
+.tool_property {
+  margin-bottom: 15px;
+}
+
+.check_btn {
+  display: inline-block;
+  width: 100px;
+  height: 33px;
+  border-radius: 17px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
+  line-height: 33px;
+  text-decoration: none;
+  margin: 50px auto 100px 30px;
+}
+
+.confirm_btn {
+  width: 144px;
+  background: #97E3E6;
+  box-shadow: 0 1px 3px #568384;
+}
+
+.return_btn {
+  background: #F7E28A;
+  box-shadow: 0 1px 3px #D3C178;
+}
+
+.error {
+  font-size: 12px;
+  color: #F70329;
+  padding-top: 3px;
+}
+
+.mytool_register h2.thanks_text {
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.btn_box {
+  display: flex;
+}
+
+.btn_box .return_btn {
+  margin-right: 0px;
+}
+
+.login_btn {
+  display: inline-block;
+  width: 144px;
+  height: 33px;
+  border-radius: 17px;
+  font-size: 11px;
+  font-weight: bold;
+  color: #707070;
+  text-align: center;
+  line-height: 33px;
+  text-decoration: none;
+  margin: 50px auto 100px 30px;
+}
