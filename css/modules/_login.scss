@@ -1,0 +1,42 @@
+$cBgGray: #f5f5f5;
+
+.content_pd {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.login {
+  & > h2 {
+    @extend .content_pd;
+  }
+  & .to_register {
+    background: $cBgGray;
+    padding: 20px;
+    margin-bottom: 20px;
+  
+    &__text {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    & a {
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    @extend .content_pd;
+  }
+} 
+.checkbox {
+  width: 18px;
+
+  &__text {
+    vertical-align: middle;
+  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}

@@ -45,7 +45,7 @@ if (!empty($_POST)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>登山道具重さ計算ツール</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css">
-  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/c09da6029c.js" crossorigin="anonymous"></script>
   <!-- Font -->
@@ -53,24 +53,24 @@ if (!empty($_POST)) {
 
 <body>
   <div class="container">
-    <header>
-      <div class="header_container">
-        <a class="site_title" href="#">
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__title" href="#">
           <h1><img src="images/mountain-icon.svg" alt="">重さ計算ツール</h1>
         </a>
-      </div><!-- header_container -->
+      </div><!-- header__inner -->
     </header>
 
     <main>
-      <section class="mytool_register">
-        <h2>ログインする</h2>
-        <div class="to_login_box">
-          <p class="login_text">　　＊入会手続きがまだの方はこちらからどうぞ</p>
-          <a class="register_btn" href="join/">入会手続きをする</a>
+      <section class="login">
+        <h2 class="title_left">ログインする</h2>
+        <div class="to_register">
+          <p class="to_register__text">＊入会手続きがまだの方はこちらからどうぞ</p>
+          <a class="btn btn_md btn_green" href="join/">入会手続きをする</a>
         </div><!-- .to_login_box -->
-        <form action="" method="post">
+        <form class="login__form" action="" method="post">
           <dl>
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="email">Eメール：</label></dt>
               <dd>
                 <input type="text" id="email" name="email" maxlength="255" value="<?php print(htmlspecialchars($email, ENT_QUOTES)); ?>">
@@ -81,20 +81,20 @@ if (!empty($_POST)) {
                   <p class="error">* ログインに失敗しました。<br>メールアドレスとパスワードを正しく入力してください</p>
                 <?php endif; ?>
               </dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
 
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="password">パスワード：</label></dt>
               <dd>
                 <input type="password" name="password" id="password" maxlength="100" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
               </dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
             <input class="checkbox" type="checkbox" id="save" name="save" value="on">
-            <label for="save">次回からは自動的にログインする</label>
+            <label class="checkbox__text" for="save">次回からは自動的にログインする</label>
           </dl>
-          <input type="submit" class="check_btn confirm_btn" value="ログインする">
+          <input type="submit" class="btn btn_md btn_bl " value="ログインする">
         </form>
-      </section><!-- mytool_register -->
+      </section><!-- login -->
 
     </main>
   </div><!-- .container -->
