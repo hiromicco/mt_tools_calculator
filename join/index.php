@@ -103,9 +103,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
               </dd>
             </div><!-- form_container -->
           </dl>
-          <input class="btn btn_md btn_bl" type="submit" class="check_btn confirm_btn" value="入力内容を確認する">
+          <input class="btn btn_md btn_bl" type="submit" value="入力内容を確認する">
         </form>
-      </section><!-- mytool_register -->
+      </section><!-- register -->
 
     </main>
   </div><!-- .container -->
