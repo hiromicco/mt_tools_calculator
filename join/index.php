@@ -46,7 +46,7 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>登山道具重さ計算ツール</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/join.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/c09da6029c.js" crossorigin="anonymous"></script>
   <!-- Font -->
@@ -54,20 +54,20 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
 
 <body>
   <div class="container">
-    <header>
-      <div class="header_container">
-        <a class="site_title" href="#">
-          <h1><img src="images/mountain-icon.svg" alt="">重さ計算ツール</h1>
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__title" href="#">
+          <h1><img src="../images/mountain-icon.svg" alt="">重さ計算ツール</h1>
         </a>
       </div><!-- header_container -->
     </header>
 
     <main>
-      <section class="mytool_register">
-        <h2>会員登録する</h2>
+      <section class="register content_pd">
+        <h2 class="title_left">会員登録する</h2>
         <form action="" method="post" enctype="multipart/form-data">
           <dl>
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="name">名前：</label></dt>
               <dd>
                 <input type="text" name="name" id="name" maxlength="255" value="<?php print(htmlspecialchars($_POST['name'], ENT_QUOTES)); ?>">
@@ -75,9 +75,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
                   <p class="error">* 名前を入力してください</p>
                 <?php endif; ?>
               </dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
 
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="email">メール：</label></dt>
               <dd>
                 <input type="text" id="email" name="email" maxlength="255" value="<?php print(htmlspecialchars($_POST['email'], ENT_QUOTES)); ?>">
@@ -88,9 +88,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
                   <p class="error">* 指定されたEメールアドレスは<br>　すでに登録されています</p>
                 <?php endif; ?>
               </dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
 
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="password">パスワード：</label></dt>
               <dd>
                 <input type="password" name="password" id="password" maxlength="100" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
@@ -101,9 +101,9 @@ if ($_REQUEST['action'] == 'rewrite' && isset($_SESSION['join'])) {
                   <p class="error">* パスワードを入力してください</p>
                 <?php endif; ?>
               </dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
           </dl>
-          <input type="submit" class="check_btn confirm_btn" value="入力内容を確認する">
+          <input class="btn btn_md btn_bl" type="submit" class="check_btn confirm_btn" value="入力内容を確認する">
         </form>
       </section><!-- mytool_register -->
 
