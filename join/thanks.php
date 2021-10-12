@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>登山道具重さ計算ツール</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/join.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/c09da6029c.js" crossorigin="anonymous"></script>
   <!-- Font -->
@@ -15,18 +15,18 @@
 
 <body>
   <div class="container">
-    <header>
-      <div class="header_container">
-        <a class="site_title" href="#">
+    <header class="header mb_md">
+      <div class="header__inner">
+        <a class="header__title" href="#">
           <h1><img src="../images/mountain-icon.svg" alt="">重さ計算ツール</h1>
         </a>
-      </div><!-- header_container -->
+      </div><!-- header__inner -->
     </header>
 
     <main>
-      <section class="mytool_register">
-        <h2 class="thanks_text">\\ ユーザー登録が完了しました //</h2>
-        <a class="login_btn return_btn" href="../">ログインする</a>
+      <section class="content_pd">
+        <h2 class="title_center mb_md">\\ ユーザー登録が完了しました //</h2>
+        <a class="btn btn_md btn_yl" href="../">ログインする</a>
       </section><!-- mytool_register -->
     </main>
   </div><!-- .container -->
