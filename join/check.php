@@ -31,7 +31,7 @@ if (!empty($_POST)) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>登山道具重さ計算ツール</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/join.css">
+  <link rel="stylesheet" href="../css/style.css">
   <!-- FontAwesome -->
   <script src="https://kit.fontawesome.com/c09da6029c.js" crossorigin="anonymous"></script>
   <!-- Font -->
@@ -39,41 +39,41 @@ if (!empty($_POST)) {
 
 <body>
   <div class="container">
-    <header>
-      <div class="header_container">
-        <a class="site_title" href="#">
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__title" href="#">
           <h1><img src="../images/mountain-icon.svg" alt="">重さ計算ツール</h1>
         </a>
-      </div><!-- header_container -->
+      </div><!-- header__inner -->
     </header>
 
     <main>
-      <section class="mytool_register">
-        <h2>会員登録する</h2>
+      <section class="check_register content_pd">
+        <h2 class="title_left">会員登録する</h2>
         <form action="" method="post">
           <input type="hidden" name="action" value="submit">
           <dl>
-            <div class="tool_property">
+            <div class="form_container mb_xs">
               <dt><label for="category">名前：</label></dt>
               <dd><?php print(htmlspecialchars($_SESSION['join']['name'])); ?></dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
 
-            <div class="tool_property">
+            <div class="form_container mb_xs">
               <dt><label for="name">メール：</label></dt>
               <dd><?php print(htmlspecialchars($_SESSION['join']['email'])); ?></dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
 
-            <div class="tool_property">
+            <div class="form_container mb_xs">
               <dt><label for="weight">パスワード：</label></dt>
               <dd>【表示されません】</dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
           </dl>
-        </section><!-- mytool_register -->
-        <div class="btn_box">
-          <a class="check_btn return_btn" href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a>
-          <input class="check_btn confirm_btn" type="submit" value="登録する" />
-        </div><!-- .btn_box -->
-      </form>
+          <div class="pt_md flex">
+            <a class="btn btn_sm mb_sm" href="index.php?action=rewrite">&laquo;&nbsp;書き直す</a>
+            <input class="btn btn_md btn_bl" type="submit" value="登録する！" />
+          </div>
+        </form>
+      </section><!-- check_register -->
     </main>
   </div><!-- .container -->
 

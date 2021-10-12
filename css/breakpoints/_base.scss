@@ -9,11 +9,20 @@ body {
   padding-right: 20px;
   padding-left: 20px;
 }
+.mb_xs {
+  margin-bottom: 10px !important;
+}
 .mb_sm {
-  margin-bottom: 30px;
+  margin-bottom: 30px !important;
 }
 .pb_sm {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
+}
+.pt_md {
+  padding-top: 20px;
+}
+.flex {
+  display: flex;
 }
 .container {
   width: 100%;
