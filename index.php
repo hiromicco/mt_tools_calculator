@@ -29,8 +29,6 @@ if (!empty($_POST)) {
 }
 $tools = $db->prepare('SELECT t.* FROM tools t, members m WHERE t.member_id=m.id AND m.id=?');
 $tools->execute(array($member['id']));
-
-
 ?>
 
 <!DOCTYPE html>
@@ -50,24 +48,27 @@ $tools->execute(array($member['id']));
 
 <body>
   <div class="container">
-    <header>
-      <div class="header_container">
-        <a class="site_title" href="#">
+    <header class="header">
+      <div class="header__inner">
+        <a class="header__title" href="#">
           <h1><img src="images/mountain-icon.svg" alt="">重さ計算ツール</h1>
         </a>
-        <div class="header_btn_container">
-          <a class="logout_btn" href="logout.php">ログアウトする</a>
-          <a class="scale_page_btn" href="select.php?id=<?php print(htmlspecialchars($member['id'], ENT_QUOTES)); ?>">重さを計算してみる ≫</a>
-        </div><!-- .header_btn_container -->
-      </div><!-- container -->
+        <div class="header__btns">
+          <a class="btn btn_sm" href="logout.php">ログアウト</a>
+          <a class="btn btn_md btn_green" href="select.php?id=<?php print(htmlspecialchars($member['id'], ENT_QUOTES)); ?>">重さを計算してみる ≫</a>
+        </div><!-- .header__btns -->
+      </div><!-- .header__inner -->
     </header>
 
     <main>
-      <section class="mytool_register">
-        <h2><span class='user_name'><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?>'s</span>　登山ツールを登録する</h2>
+      <section class="tool_register">
+        <h2 class="title_left">
+          <!-- <span class='user_name'><?php print(htmlspecialchars($member['name'], ENT_QUOTES)); ?>'s　</span> -->
+          登山ツールを登録する
+        </h2>
         <form action="" method="post">
           <dl>
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="category">カテゴリー：</label></dt>
               <dd><select name="category" id="category">
                   <option value="登山用具">登山用具</option>
@@ -80,40 +81,40 @@ $tools->execute(array($member['id']));
                   <option value="生活・衛生">生活・衛生</option>
                   <option value="サコッシュ">サコッシュ</option>
                 </select></dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
 
-            <div class="tool_property">
+            <div class="form_container">
               <dt><label for="name">品名：</label></dt>
               <dd><input type="text" name="tool_name" id="name"></dd>
-            </div><!-- tool_property -->
-            <div class="tool_property">
+            </div><!-- form_container -->
+            <div class="form_container">
               <dt><label for="weight">重さ：</label></dt>
               <dd><input type="number" name="weight" id="weight"> g</dd>
-            </div><!-- tool_property -->
+            </div><!-- form_container -->
           </dl>
           <input class="item_register_btn" type="submit" value="登録する">
         </form>
-      </section><!-- mytool_register -->
+      </section><!-- tool_register -->
 
-      <section class="mytool_list">
-        <h2>My 登山ツール</h2>
+      <section class="tool_list">
+        <h2 class="title_center">My 登山ツール</h2>
         <table>
           <tr>
             <th>カテゴリー</th>
             <th>　　　品名　　　</th>
             <th>重さ</th>
-            <th class="delete_th"></th>
+            <th></th>
           </tr>
           <tr>
             <?php foreach ($tools as $tool) : ?>
               <td><?php print(htmlspecialchars($tool['category'], ENT_QUOTES)); ?></td>
               <td><?php print(htmlspecialchars($tool['tool_name'], ENT_QUOTES)); ?></td>
               <td><?php print(htmlspecialchars($tool['weight'], ENT_QUOTES)); ?>g</td>
-              <td><a href="delete.php?id=<?php print(htmlspecialchars($tool['id'], ENT_QUOTES)); ?>" class='delete'> × </a></td>
+              <td><a class="delete_link" href="delete.php?id=<?php print(htmlspecialchars($tool['id'], ENT_QUOTES)); ?>" class='delete'> × </a></td>
           </tr>
         <?php endforeach; ?>
         </table>
-      </section><!-- mytool_list -->
+      </section><!-- tool_list -->
     </main>
   </div><!-- .container -->
 

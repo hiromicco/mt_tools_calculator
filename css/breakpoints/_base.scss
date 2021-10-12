@@ -1,0 +1,152 @@
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans",
+    "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
+  font-size: 16px;
+  color: $cGray;
+}
+
+.content_pd {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+.mb_sm {
+  margin-bottom: 30px;
+}
+.pb_sm {
+  padding-bottom: 20px;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.title_left {
+  font-size: 1.1em;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+.title_center {
+  font-weight: normal;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.form_container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 20px;
+  }
+}
+dt {
+  width: 84px;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 29px;
+}
+select,
+input {
+  width: 204px;
+  height: 28px;
+  border: 1px solid #b4b2b2;
+  border-radius: 7px;
+  padding-left: 10px;
+}
+
+/* header */
+.header {
+  width: 100%;
+  @extend .content_pd;
+  @extend .mb_sm;
+  &__inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+/* main */
+/* section.tool_register */
+.tool_register {
+  @extend .content_pd;
+  @extend .pb_sm;
+  & .user_name {
+    font-family: serif;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  & .item_register_btn {
+    display: block;
+    width: 144px;
+    height: 33px;
+    background: #97e3e6;
+    border-radius: 17px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #707070;
+    text-align: center;
+    line-height: 33px;
+    text-decoration: none;
+    box-shadow: 0 2px 3px #4da0a1;
+    border: none;
+    margin-left: 150px;
+  }
+}
+/* section.tool_register ここまで*/
+
+/* section.tool_list */
+.tool_list {
+  background: $cBgGray;
+  padding-top: 25px;
+  padding-bottom: 65px;
+  text-align: center;
+
+  & table,
+  th,
+  td {
+    border: 1px solid #b4b2b2;
+    font-size: 13px;
+    font-weight: normal;
+    background: #fff;
+  }
+
+  & table {
+    margin: 0 auto;
+  }
+
+  & th {
+    border-bottom: 1.3px solid #555;
+    padding: 11px 14px;
+
+    &:last-child {
+      width: 10px;
+    }
+  }
+
+  & td {
+    padding: 10px;
+  }
+
+  & .delete_link {
+    font-size: 16px;
+    text-decoration: none;
+  }
+}
+/* section.tool_list ここまで*/
+
+/* footer  */
+footer {
+  width: 100%;
+  background: #909198;
+  font-size: 10px;
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+}
