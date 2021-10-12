@@ -1,0 +1,22 @@
+.header__title {
+  display: block;
+  align-items: center;
+  width: 168px;
+  height: 41px;
+  font-size: 17px;
+  color: $cGray;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid $cGray;
+  border-radius: 8px;
+  margin-top: 24px;
+  padding: 12px 2px 11px 2px;
+
+  & img {
+    margin-right: 4px;
+  }
+
+  & h1 {
+    font-weight: 600;
+  }
+}
