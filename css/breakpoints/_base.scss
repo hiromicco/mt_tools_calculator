@@ -51,6 +51,36 @@ body {
     margin-bottom: 20px;
   }
 }
+
+table,
+th,
+td {
+  border: 1px solid #b4b2b2;
+  font-size: 13px;
+  font-weight: normal;
+  background: #fff;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  border-bottom: 1.3px solid #555;
+  padding: 11px 10px;
+  word-break: keep-all;
+
+  &:last-child {
+    width: 10px;
+  }
+}
+
+td {
+  // min-width: 61px;
+  padding: 10px;
+  word-break: keep-all;
+}
+
 dt {
   width: 84px;
   font-size: 14px;
@@ -67,7 +97,7 @@ input {
 }
 .error {
   font-size: 12px;
-  color: #F70329;
+  color: #f70329;
   padding-top: 3px;
 }
 
@@ -100,21 +130,9 @@ input {
     font-weight: bold;
   }
 
-  & .item_register_btn {
-    display: block;
-    width: 144px;
-    height: 33px;
-    background: #97e3e6;
-    border-radius: 17px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #707070;
-    text-align: center;
-    line-height: 33px;
-    text-decoration: none;
-    box-shadow: 0 2px 3px #4da0a1;
-    border: none;
-    margin-left: 150px;
+  &__btn {
+    margin-right: 22px;
+    margin-left: auto;
   }
 }
 /* section.tool_register ここまで*/
@@ -126,45 +144,91 @@ input {
   padding-bottom: 65px;
   text-align: center;
 
-  & table,
-  th,
-  td {
-    border: 1px solid #b4b2b2;
-    font-size: 13px;
-    font-weight: normal;
-    background: #fff;
-  }
-
-  & table {
-    margin: 0 auto;
-  }
-
-  & th {
-    border-bottom: 1.3px solid #555;
-    padding: 11px 14px;
-
-    &:last-child {
-      width: 10px;
-    }
-  }
-
-  & td {
-    padding: 10px;
-  }
-
   & .delete_link {
+    display: block;
+    width: 14px;
     font-size: 16px;
     text-decoration: none;
   }
 }
 /* section.tool_list ここまで*/
 
+// login.php
+.login {
+  & > h2 {
+    @extend .content_pd;
+  }
+  & .to_register {
+    background: $cBgGray;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    &__text {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    & a {
+      margin: 0 auto;
+    }
+  }
+
+  &__form {
+    @extend .content_pd;
+  }
+
+  &__checkbox {
+    width: 18px;
+
+    & > label {
+      vertical-align: middle;
+    }
+  }
+}
+
+// select.php
+.select {
+  background: #f8f8f8;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 60px;
+
+  & p {
+    font-size: 13px;
+    margin-bottom: 19px;
+  }
+
+  &__check {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+  }
+
+  &__btn {
+    margin-right: 22px;
+    margin-left: auto;
+  }
+  & table {
+    @extend .mb_sm;
+  }
+  & th:first-child {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  & td:first-child {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}
+
 /* footer  */
 footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background: #909198;
-  font-size: 10px;
+  font-size: 11px;
   color: #fff;
   text-align: center;
-  padding: 16px 0;
+  padding: 14px 0;
 }

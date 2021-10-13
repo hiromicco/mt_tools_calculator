@@ -28,7 +28,14 @@
   line-height: 33px;
 }
 
-.btn_green {
+.btn_lg {
+  width: 216px;
+  height: 33px;
+  font-size: 12px;
+  line-height: 33px;
+}
+
+.btn_gr {
   background: #a0e697;
   -webkit-box-shadow: 0 1px 3px #5B8456;
           box-shadow: 0 1px 3px #5B8456;
@@ -42,18 +49,11 @@
   margin-top: 20px;
 }
 
-.check_btn {
-  display: inline-block;
-  width: 100px;
-  height: 33px;
-  border-radius: 17px;
-  font-size: 11px;
-  font-weight: bold;
-  color: #707070;
-  text-align: center;
-  line-height: 33px;
-  text-decoration: none;
-  margin: 50px auto 100px 30px;
+.btn_yl {
+  background: #F7E28A;
+  -webkit-box-shadow: 0 1px 3px #D3C178;
+          box-shadow: 0 1px 3px #D3C178;
+  margin: 0 auto;
 }
 
 .header__title {
@@ -81,57 +81,41 @@
   font-weight: 600;
 }
 
-.content_pd, .login > h2, .login__form, .header, .tool_register {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-.login .to_register {
-  background: #f5f5f5;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.login .to_register__text {
-  font-size: 14px;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.login .to_register a {
-  margin: 0 auto;
-}
-
-.checkbox {
-  width: 18px;
-}
-
-.checkbox__text {
-  vertical-align: middle;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-}
-
 body {
   font-family: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Meiryo", sans-serif;
   font-size: 16px;
   color: #707070;
 }
 
-.content_pd, .login > h2, .login__form, .header, .tool_register {
+.content_pd, .header, .tool_register, .login > h2, .login__form {
   padding-right: 20px;
   padding-left: 20px;
 }
 
-.mb_sm, .header {
-  margin-bottom: 30px;
+.mb_xs {
+  margin-bottom: 15px !important;
+}
+
+.mb_sm, .header, .select table {
+  margin-bottom: 30px !important;
+}
+
+.mb_md {
+  margin-bottom: 50px !important;
 }
 
 .pb_sm, .tool_register {
-  padding-bottom: 20px;
+  padding-bottom: 20px !important;
+}
+
+.pt_md {
+  padding-top: 20px !important;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container {
@@ -165,6 +149,34 @@ body {
   margin-bottom: 20px;
 }
 
+table,
+th,
+td {
+  border: 1px solid #b4b2b2;
+  font-size: 13px;
+  font-weight: normal;
+  background: #fff;
+}
+
+table {
+  margin: 0 auto;
+}
+
+th {
+  border-bottom: 1.3px solid #555;
+  padding: 11px 10px;
+  word-break: keep-all;
+}
+
+th:last-child {
+  width: 10px;
+}
+
+td {
+  padding: 10px;
+  word-break: keep-all;
+}
+
 dt {
   width: 84px;
   font-size: 14px;
@@ -179,6 +191,12 @@ input {
   border: 1px solid #b4b2b2;
   border-radius: 7px;
   padding-left: 10px;
+}
+
+.error {
+  font-size: 12px;
+  color: #f70329;
+  padding-top: 3px;
 }
 
 /* header */
@@ -217,22 +235,9 @@ input {
   font-weight: bold;
 }
 
-.tool_register .item_register_btn {
-  display: block;
-  width: 144px;
-  height: 33px;
-  background: #97e3e6;
-  border-radius: 17px;
-  font-size: 11px;
-  font-weight: bold;
-  color: #707070;
-  text-align: center;
-  line-height: 33px;
-  text-decoration: none;
-  -webkit-box-shadow: 0 2px 3px #4da0a1;
-          box-shadow: 0 2px 3px #4da0a1;
-  border: none;
-  margin-left: 150px;
+.tool_register__btn {
+  margin-right: 22px;
+  margin-left: auto;
 }
 
 /* section.tool_register ここまで*/
@@ -244,46 +249,81 @@ input {
   text-align: center;
 }
 
-.tool_list table,
-.tool_list th,
-.tool_list td {
-  border: 1px solid #b4b2b2;
-  font-size: 13px;
-  font-weight: normal;
-  background: #fff;
-}
-
-.tool_list table {
-  margin: 0 auto;
-}
-
-.tool_list th {
-  border-bottom: 1.3px solid #555;
-  padding: 11px 14px;
-}
-
-.tool_list th:last-child {
-  width: 10px;
-}
-
-.tool_list td {
-  padding: 10px;
-}
-
 .tool_list .delete_link {
+  display: block;
+  width: 14px;
   font-size: 16px;
   text-decoration: none;
 }
 
 /* section.tool_list ここまで*/
+.login .to_register {
+  background: #f5f5f5;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.login .to_register__text {
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.login .to_register a {
+  margin: 0 auto;
+}
+
+.login__checkbox {
+  width: 18px;
+}
+
+.login__checkbox > label {
+  vertical-align: middle;
+}
+
+.select {
+  background: #f8f8f8;
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 60px;
+}
+
+.select p {
+  font-size: 13px;
+  margin-bottom: 19px;
+}
+
+.select__check {
+  width: 15px;
+  height: 15px;
+  margin-right: 6px;
+}
+
+.select__btn {
+  margin-right: 22px;
+  margin-left: auto;
+}
+
+.select th:first-child {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.select td:first-child {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
 /* footer  */
 footer {
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background: #909198;
-  font-size: 10px;
+  font-size: 11px;
   color: #fff;
   text-align: center;
-  padding: 16px 0;
+  padding: 14px 0;
 }
 
 @media screen and (min-width: 600px) {
