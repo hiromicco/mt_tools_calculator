@@ -55,7 +55,7 @@ $tools->execute(array($member['id']));
         </a>
         <div class="header__btns">
           <a class="btn btn_sm" href="logout.php">ログアウト</a>
-          <a class="btn btn_md btn_green" href="select.php?id=<?php print(htmlspecialchars($member['id'], ENT_QUOTES)); ?>">重さを計算してみる ≫</a>
+          <a class="btn btn_md btn_gr" href="select.php?id=<?php print(htmlspecialchars($member['id'], ENT_QUOTES)); ?>">重さを計算してみる ≫</a>
         </div><!-- .header__btns -->
       </div><!-- .header__inner -->
     </header>
@@ -92,7 +92,7 @@ $tools->execute(array($member['id']));
               <dd><input type="number" name="weight" id="weight"> g</dd>
             </div><!-- form_container -->
           </dl>
-          <input class="item_register_btn" type="submit" value="登録する">
+          <input class="btn btn_bl btn_md tool_register__btn" type="submit" value="登録する">
         </form>
       </section><!-- tool_register -->
 
@@ -101,7 +101,7 @@ $tools->execute(array($member['id']));
         <table>
           <tr>
             <th>カテゴリー</th>
-            <th>　　　品名　　　</th>
+            <th>品名</th>
             <th>重さ</th>
             <th></th>
           </tr>
@@ -109,7 +109,7 @@ $tools->execute(array($member['id']));
             <?php foreach ($tools as $tool) : ?>
               <td><?php print(htmlspecialchars($tool['category'], ENT_QUOTES)); ?></td>
               <td><?php print(htmlspecialchars($tool['tool_name'], ENT_QUOTES)); ?></td>
-              <td><?php print(htmlspecialchars($tool['weight'], ENT_QUOTES)); ?>g</td>
+              <td><?php print(htmlspecialchars($tool['weight'], ENT_QUOTES)); ?>&nbsp;g</td>
               <td><a class="delete_link" href="delete.php?id=<?php print(htmlspecialchars($tool['id'], ENT_QUOTES)); ?>" class='delete'> × </a></td>
           </tr>
         <?php endforeach; ?>

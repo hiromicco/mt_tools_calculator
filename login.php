@@ -66,7 +66,7 @@ if (!empty($_POST)) {
         <h2 class="title_left">ログインする</h2>
         <div class="to_register">
           <p class="to_register__text">＊入会手続きがまだの方はこちらからどうぞ</p>
-          <a class="btn btn_md btn_green" href="join/">入会手続きをする</a>
+          <a class="btn btn_md btn_gr" href="join/">入会手続きをする</a>
         </div><!-- .to_login_box -->
         <form class="login__form" action="" method="post">
           <dl>
@@ -89,8 +89,8 @@ if (!empty($_POST)) {
                 <input type="password" name="password" id="password" maxlength="100" value="<?php print(htmlspecialchars($_POST['password'], ENT_QUOTES)); ?>">
               </dd>
             </div><!-- form_container -->
-            <input class="checkbox" type="checkbox" id="save" name="save" value="on">
-            <label class="checkbox__text" for="save">次回からは自動的にログインする</label>
+            <input class="login__checkbox" type="checkbox" id="save" name="save" value="on">
+            <label for="save">次回からは自動的にログインする</label>
           </dl>
           <input type="submit" class="btn btn_md btn_bl " value="ログインする">
         </form>
