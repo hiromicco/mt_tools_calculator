@@ -221,6 +221,43 @@ input {
   }
 }
 
+// result.php
+.result {
+  @extend .content_pd;
+  
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .mb_sm;
+  }
+
+  &__text {
+    margin-right: 15px;
+  }
+
+  &__weight {
+    width: 186px;
+    border-bottom: 1px solid #707070;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: right;
+
+    & > span {
+      font-size: 20px;
+      font-weight: normal;
+      margin-left: 30px;
+    }
+  }
+
+  &__table {
+    text-align: center;
+    @extend .mb_sm;
+  }
+}
+
 /* footer  */
 footer {
   position: fixed;
